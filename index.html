@@ -1,1 +1,229 @@
 
+  <!-- Add more items as needed -->
+    </div>
+  </main>
+</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Search Bar</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background-color: #f4f4f9;
+    }
+
+    .search-container {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 150px;
+      display: flex;
+      align-items: center;
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 5px 10px;
+    }
+
+    .search-input {
+      flex: 1;
+      border: none;
+      outline: none;
+      font-size: 14px;
+      padding: 5px;
+    }
+
+    .search-button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    .search-button img {
+      width: 16px;
+      height: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="search-container">
+    <input 
+      type="text" 
+      class="search-input" 
+      id="searchInput" 
+      placeholder="Search...">
+    <button class="search-button" onclick="performSearch()">
+      <img src="https://img.icons8.com/ios-filled/50/000000/search--v1.png" alt="Search">
+    </button>
+  </div>
+
+  <script>
+    function performSearch() {
+      const query = document.getElementById('searchInput').value;
+      if (query.trim() === '') {
+        alert('Please enter a search term.');
+      } else {
+        alert(`Searching for: ${query}`);
+      }
+    }
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In</title>
+</head>
+<body>
+  <!-- Your existing sign-in bar -->
+  <div>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button id="signInButton">Sign In</button>
+  </div>
+
+  <!-- Script to make it functional -->
+  <script>
+    document.getElementById('signInButton').addEventListener('click', function() {
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      if (!username || !password) {
+        alert('Please enter both username and password.');
+      } else {
+        alert(`Welcome, ${username}!`);
+      }
+    });
+  </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shoe Store</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+   
+    <nav>
+      <ul>
+        <header>
+  <div class="logo">My Shoe Store</div>
+  <nav>
+    <ul>
+       <li><a href="#">Find a Store </a></li>
+      <li><a href="#">Men</a></li>
+      <li><a href="#">Women</a></li>
+      <li><a href="#">Kids</a></li>
+      <li><a href="#">Jordans</a></li>
+      <li><a href="#">Sale</a></li>
+    </ul>
+  </nav>
+  <div class="cart-icon">
+    <img src="https://img.icons8.com/ios-filled/50/000000/shopping-cart.png" alt="Cart">
+    <span class="cart-count">0</span>
+  </div>
+</header>
+
+      </ul>
+      
+    </nav>
+  </header>
+  
+  <section class="banner">
+    <h1>Free Shipping on All Orders</h1>
+    <p>Join now and get 15% off your first purchase!</p>
+    <button>Become a Member</button>
+  </section>
+ <div class="container">
+   
+
+</iframe>
+
+
+  
+<img src="https://app.termly.io/resource-blocker/338a3bba-6138-4bb9-af78-b65d0c6ae632?autoBlock=off" width="100%" height="optional_height">
+<img src="https://images.pexels.com/photos/2272752/pexels-photo-2272752.jpeg" alt="description" width="100%" height="optional_height">
+<img src="https://weartesters.com/uploads/2018/02/jordan-6-rings-concord-3.jpg" width="100%" height="optional_height">
+
+  <img src="https://wallpapers-clan.com/wp-content/uploads/2024/09/nike-sneakers-pattern-desktop-wallpaper-preview.jpg" width="100%" height="optional_height">
+  
+      <!-- Filter Panel -->
+  <aside class="filter-panel">
+    <h3>Filters</h3>
+
+    <div class="filter-group">
+      <label for="genderFilter">Gender:</label>
+      <select id="genderFilter">
+        <option value="all">All</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+    </div>
+
+    <div class="filter-group">
+      <label>Category:</label>
+      <input type="checkbox" id="soccer" value="soccer"> Soccer<br>
+      <input type="checkbox" id="football" value="football"> Football<br>
+      <input type="checkbox" id="basketball" value="basketball"> Basketball<br>
+    </div>
+
+    <div class="filter-group">
+      <label>Age:</label>
+      <input type="radio" name="age" value="under18"> Under 18<br>
+      <input type="radio" name="age" value="18-25"> 18-25<br>
+      <input type="radio" name="age" value="25plus"> 25+<br>
+    </div>
+
+    <button onclick="applyFilters()">Apply Filters</button>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="content">
+    <h2>Products</h2>
+    <div class="items">
+      <div class="item" data-gender="male" data-category="soccer" data-age="under18">Soccer Ball (Male, Under 18)</div>
+      <div class="item" data-gender="female" data-category="basketball" data-age="18-25">Basketball Shoes (Female, 18-25)</div>
+      <div class="item" data-gender="male" data-category="football" data-age="25plus">Football Gear (Male, 25+)</div>
+      
+      
+  <section class="features">
+    <div class="feature">
+      
+      <h3>Gift Cards</h3>
+      <p>Give the perfect gift for any occasion.</p>
+    </div>
+    <div class="feature">
+      <h3>Student Discount</h3>
+      <p>Save more with our exclusive deals for students.</p>
+    </div>
+    <div class="feature">
+      <h3>About Us</h3>
+      <p>Learn about our journey and what drives us.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div>Contact Us | Store Locations | Cart</div>
+ <number:>(917)595-9963,
+ <number:>(929)305-2258
+   <h4>Owned By: Shafayet, Monjurul<h1/>
+  </footer>
+  <script src="scripts.js"></script>
+</body>
+</html>
